@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ai-proxy
+    env: node
+    plan: free
+    branch: main
+    buildCommand: "npm install"
+    startCommand: "node server.js"
+    envVars:
+      - key: OPENROUTER_API_KEY
+        sync: false
